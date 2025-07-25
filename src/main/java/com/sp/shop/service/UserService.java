@@ -31,8 +31,8 @@ public class UserService {
     private EmailService emailService;
     
 
-    @Autowired
-    private WhatsAppService whatsAppService;
+    // @Autowired
+    // private WhatsAppService whatsAppService;
     
     // Register new user
     public User registerUser(User user) {
@@ -67,7 +67,7 @@ public class UserService {
         }
 
         String message = "Hi " + user.getUsername() + ", your verification code is: " + verificationCode;
-        whatsAppService.sendMessage(mobile, message);
+        // whatsAppService.sendMessage(mobile, message);
         return savedUser;
     }
     
